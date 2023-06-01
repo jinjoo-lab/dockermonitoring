@@ -1,7 +1,5 @@
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.simple.JSONArray;
 
 import java.io.*;
 import java.lang.management.ManagementFactory;
@@ -30,7 +28,6 @@ class RxTx
         this.RxPacket= RxPacket;
         this.RxByte=RxByte;
     }
-
     @Override
     public String toString() {
         return " rx byte : "+this.RxByte+
