@@ -1,5 +1,5 @@
-# dockermonitoring
-dockermonitoring with use docker engine
+# docker monitoring (container monitoring )
+docker monitoring with use docker engine
 # 1. host 기본 정보
 가장 기본적인 docker engine 호출 시 들어오는 json 정보를 자바의 ObjectMapper를 사용 하여 list 형태로 가져온다. list 안의 정보들은 map 형태이기 때문에 key 값으로 모든 정보 를 가져올 수 있다. 그렇기 때문에 특별히 클래스를 만들지 않아도 프로그래밍이 가능하다.
 java의 Runtime().getRuntime().availableProcessors() 호출 시 논리적 코어의 개수를 알 수 있는데 이 값을 2로 나눠줄 경우 물리 코어의 개수를 확인 할 수 있다.
