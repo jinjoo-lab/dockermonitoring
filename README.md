@@ -1,5 +1,26 @@
 # docker monitoring (container monitoring )
 docker monitoring with use docker engine
+
+# <모니터링 출력 메트릭 리스트>
+1. 수행중인 컨테이너 수, 호스트 메모리 크기 총량(MB), 호스트 CPU 정보 출력
+메모리정보: MB
+CPU 정보: 코어 1개를 100%로, 코어 4개일 시 400%
+2. 각 컨테이너에 대한 동적 자원 정보 및 정적 자원 정보
+[정적 자원 정보]:
+-IP
+-프로세스 아이디
+-할당된 CPU 개수
+-할당된 메모리 크기
+[동원 점유 정보]:
+-CPU: CPU 점유율
+-메모리:메모리 점유율, 사용중인 메모리,
+-네트워크: tx(byte) 와 tx 패킷 개수, rx(byte)와 rx 패킷 개수 (축적x, 주기 동안의 byte
+및 패킷 개수)
+3. 호스트 유휴 자원 정보
+호스트 유휴 메모리: MB
+호스트 유휴 CPU : %
+
+
 # 1. host 기본 정보
 가장 기본적인 docker engine 호출 시 들어오는 json 정보를 자바의 ObjectMapper를 사용 하여 list 형태로 가져온다. list 안의 정보들은 map 형태이기 때문에 key 값으로 모든 정보 를 가져올 수 있다. 그렇기 때문에 특별히 클래스를 만들지 않아도 프로그래밍이 가능하다.
 java의 Runtime().getRuntime().availableProcessors() 호출 시 논리적 코어의 개수를 알 수 있는데 이 값을 2로 나눠줄 경우 물리 코어의 개수를 확인 할 수 있다.
